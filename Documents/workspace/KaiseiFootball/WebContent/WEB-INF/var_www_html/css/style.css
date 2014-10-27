@@ -116,7 +116,8 @@ ul#menu li {
 
 #headerMenu {
   top: 50px; /* ■上下位置調整 */
-  left: 100px; /* ■左右位置調整 */
+  /*left: 200px;  ■左右位置調整 */
+  text-align: center;
 }
 #headerMenu ul.menu li {
   font-size: 24px; /* ■文字サイズ */
