@@ -1,0 +1,330 @@
+@charset "shift_jis";
+
+/*
+---------------------------------------------------------------------------
+■制作元：テンプレートパーティー
+■URL：http://template-party.com/
+---------------------------------------------------------------------------*/
+
+body {
+	color: #CCCCCC;	/*全体の文字色*/
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font: 75%/2 "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	background: #000000 url(../images/bg.gif) repeat-x center top;	/*背景色、背景画像の読み込み＆X軸(横軸)にリピート＆上部に配置*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style-type: none;
+}
+img {
+	border: none;
+}
+input,textarea,select {
+	font-size: 1em;
+}
+
+form {
+	margin: 0px;
+}
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #CCCCCC;
+}
+a:hover {
+	color: #C3CC0D;	/*マウスオン時の文字色（全体）*/
+	text-decoration: none;	/*オン時に下線を消す設定。消さないならこの１行削除。*/
+}
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	text-align: left;
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*ヘッダー（ロゴなどが入っているブロック）
+---------------------------------------------------------------------------*/
+#header {
+	text-align: center;
+	width: 100%;
+}
+
+/*メインメニュー
+---------------------------------------------------------------------------*/
+ul#menu {
+	padding-left: 100px;
+}
+ul#menu li {
+	float: left;
+	padding-bottom: 20px;
+}
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+#contents {
+	clear: left;
+	width: 100%;
+	background: #000 url(../images/contents_bg.gif) no-repeat center top;	/*コンテンツ背景画像の読み込み*/
+	padding-top: 60px;
+}
+
+/*メインコンテンツ
+---------------------------------------------------------------------------*/
+#main {
+	width: 800px;	/*メインコンテンツ幅*/
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 50px;
+}
+/*h2タグ設定*/
+#main h2 {
+	font-size: 100%;	/*文字サイズ*/
+	clear: both;
+	width: 780px;
+	line-height: 40px;
+	height: 40px;
+	overflow: hidden;
+	background: url(../images/title_bg.gif) no-repeat;	/*背景画像の読み込み*/
+	padding-left: 20px;
+}
+/*段落タグの余白設定*/
+#main p {
+	padding: 0.5em 20px 1em;	/*左から、上、左右、下への余白*/
+}
+/*段落タグ内に画像を置いた場合に幅一杯使う設定*/
+#main p.img {
+	padding: 0.5em 0px 1em;
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+#main .new {
+	overflow: auto;	/*iframe風に見せる設定。全部表示させたいのならこの行と下のheightの行を削除。*/
+	height: 150px;	/*ボックスの高さ*/
+	width: 760px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main .new dl {
+	clear: left;
+	width: 740px;
+	border-bottom: 1px solid #333333;	/*日付ごとの下線の幅、線種、色*/
+	overflow: hidden;
+}
+#main .new dt {
+	font-weight: bold;
+	float: left;
+	width: 100px;
+}
+#main .new dd {
+	float: left;
+	width: 540px;
+}
+#main .new dd img {
+	vertical-align: middle;
+}
+*html #main .new dd img {
+	margin-top:0.5em;
+	vertical-align: baseline;
+}
+
+/*フッター
+---------------------------------------------------------------------------*/
+#footer {
+	clear: both;
+	width: 100%;
+	text-align: center;	/*文字をセンタリング*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	letter-spacing: 0.2em;	/*文字間を少しあける設定。通常がいいならこの１行削除。*/
+	font-size: 11px;	/*文字サイズ*/
+	background: #000;
+}
+#footer a {
+	text-decoration: none;
+}
+
+/*テーブル１
+---------------------------------------------------------------------------*/
+.ta1 {
+	border: 3px solid #434343;	/*テーブルの外側の枠線の幅、線種、色*/
+	width: 760px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.ta1 td, .ta1 th{
+	border: 1px solid #434343;	/*テーブルの枠線の幅、線種、色*/
+	line-height: 2;
+}
+/*テーブル内の右側*/
+.ta1 td{
+	width: 513px;
+	padding: 10px;
+	vertical-align: top;
+}
+/*テーブル内の左側の見出し部分*/
+.ta1 th{
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+	background: #151515;	/*背景色*/
+}
+/*テーブル１行目に入った見出し部分*/
+.ta1 th.tamidashi{
+	width: auto;
+	text-align: left;
+	background: #343434 url(../images/bg1.gif) repeat-x left top;	/*左から、背景色、背景画像の読み込み*/
+}
+
+/*トップページのスライドショー
+---------------------------------------------------------------------------*/
+#mainimg {
+	position: relative;
+	height: 700px;
+	width: 800px;
+}
+#mainimg .slide_file {
+	display: none;
+}
+#slide_image {
+	z-Index:2;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+#slide_image2 {
+	z-Index:1;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+#mainimg img {
+	vertical-align: bottom;
+}
+
+/*MENUページ内ボックス
+---------------------------------------------------------------------------*/
+#main .box1 {
+	padding: 10px;
+	width: 734px;
+	border: 3px solid #434343;	/*ボックスの線の幅、線種、色*/
+	overflow: hidden;
+	background: #000;	/*背景色*/
+	margin: 0px auto 0.5em;
+}
+/*「おすすめ」マーク設定*/
+#main .box1.osusume {
+	background: url(../images/mark_osusume.gif) no-repeat right bottom;
+}
+/*写真設定*/
+#main .box1 p.photo {
+	float: left;	/*写真を左よせする設定*/
+	width:200px;
+	padding: 0;
+	margin-right: 20px;
+}
+/*h3見出しタグ*/
+#main .box1 h3 {
+	font-size: 100%;
+	margin-bottom: 0.5em;
+	color: #C3CC0D;	/*文字色*/
+}
+/*段落タグ*/
+#main .box1 p {
+	padding: 0px;
+}
+
+/*MENUページのドリンクメニューやフードメニューのメニューパーツ
+---------------------------------------------------------------------------*/
+/*メニューブロック全体*/
+ul.nav {
+	background: #343434 url(../images/bg1.gif) repeat-x left top;	/*左から、背景色、背景画像の読み込み*/
+	margin-bottom: 30px;
+	border-top: 1px solid #434343;		/*上側の線の幅、線種、色*/
+	border-right: 1px solid #434343;	/*右側の線の幅、線種、色*/
+	border-bottom: 4px solid #FF207E;	/*下側の線の幅、線種、色*/
+	border-left: 1px solid #434343;		/*左側の線の幅、線種、色*/
+	padding: 5px 20px;	/*左から、上下、左右への余白*/
+}
+/*メニュー１個ごとの設定*/
+ul.nav li {
+	display: inline;		/*メニューを横に並べる設定*/
+	padding-right: 15px;	/*メニュー間の余白*/
+}
+
+/*COUPONページ
+---------------------------------------------------------------------------*/
+/*クーポンブロック全体の設定*/
+#coupon {
+	width: 760px;	/*ブロック幅。画像に合わせるとよい。*/
+	height: 400px;	/*ブロックの高さ。画像に合わせるとよい。*/
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+/*クーポン内の説明文設定*/
+#coupon p {
+	position: absolute;
+	height: 100px;	/*ボックスの高さ*/
+	width: 340px;	/*ボックスの幅*/
+	top: 260px;		/*couponブロックに対して上から260pxの位置に配置*/
+	right: 50px;	/*couponブロックに対して右から50pxの位置に配置*/
+	padding: 0px;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {
+	background-color: #292929;
+}
+.mb1em {
+	margin-bottom: 1em !important;
+}
+.clear {
+	clear: both;
+}
+ul.disc {
+	padding: 0em 20px 1em;
+	list-style: disc;
+	width: 720px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.color1 {
+	color: #C3CC0D;
+}
+.pr {
+	font-size: 10px;
+}
+p.pagetop {
+	text-align: right;
+	width: 760px;
+	font-size: 11px;
+	letter-spacing: 0.2em;
+}
+.btn {
+	font-size: 13px;
+}
+.wl {
+	width: 96%;
+}
+.ws {
+	width: 50%;
+}
+.c {
+	text-align: center;
+}

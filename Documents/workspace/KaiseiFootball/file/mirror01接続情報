@@ -1,0 +1,19 @@
+cd  /Users/kagamiyoshihiro/Downloads/keyfile
+ssh -i /Users/kagamiyoshihiro/Downloads/keyfile/kaiseiob-football.pem ec2-user@54.213.117.200
+ssh -i kaiseiob-football.pem ec2-user@54.213.117.200
+
+
+sudo su -
+yum install httpd
+yum install vsftpd 
+/etc/init.d/httpd start
+/etc/init.d/vsftpd start
+
+chkconfig httpd on
+chkconfig vsftpd on
+ 
+■ファイル転送 
+scp -i /Users/kagamiyoshihiro/Downloads/keyfile/kaiseiob-football.pem -P 22 -r /Users/kagamiyoshihiro/Desktop/HP対応/素材/var_www_html/* ec2-user@54.213.117.200:/var/www/html/.
+
+
+cd /Users/kagamiyoshihiro/Documents/workspace/KaiseiFootball
